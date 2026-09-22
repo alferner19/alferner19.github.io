@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="张柏芝陈冠希 - 娱乐资讯与经典影视作品回顾。本站提供关于张柏芝与陈冠希的演艺生涯、经典电影、音乐作品及娱乐圈动态的综合信息平台。">
+    <meta name="keywords" content="张柏芝,陈冠希,香港娱乐圈,古惑仔,无间道,喜剧之王,星愿">
+    <title>张柏芝陈冠希 - 娱乐经典回顾与演艺生涯资料库</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #d4af37;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        nav a:hover {
+            opacity: 1;
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/celebhero/1600/600.jpg') center/cover no-repeat;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #b59020;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.6rem;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Article Card */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Spotlight Section (Text heavy) */
+        .spotlight {
+            background-color: white;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .spotlight h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .spotlight p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: white;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 12px;
+            border: 1px solid #eee;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 1rem 1rem;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            background-color: #f0f0f0;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #888;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+
+            .header-inner {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>★</span> 演艺档案
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#overview">演艺生涯</a></li>
+                    <li><a href="#movies">经典电影</a></li>
+                    <li><a href="#music">音乐作品</a></li>
+                    <li><a href="#comparison">人物对比</a></li>
+                    <li><a href="#faq">常见问答</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>张柏芝陈冠希：香港娱乐圈的黄金记忆</h1>
+                <p>回顾两位极具影响力的香港艺人，探索他们在电影、音乐领域的经典作品及其对华语流行文化的深远影响。</p>
+                <a href="#overview" class="btn">浏览资料库</a>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="container">
+            <div class="section-header">
+                <h2 class="section-title">演艺生涯概览</h2>
+            </div>
+            <div class="spotlight">
+                <h2>从出道到巅峰</h2>
+                <p>张柏芝与陈冠希作为千禧年初香港娱乐圈最具代表性的艺人之一，他们的名字几乎成为了那个时代娱乐记忆的代名词。两人不仅在电影领域有着极高的成就，更在音乐、时尚等方面活跃多年。</p>
+                <p><strong>张柏芝</strong>，以清纯形象出道，凭借《喜剧之王》和《星愿》等影片迅速走红，成为当时最受欢迎的女演员之一。她演技多变，从古惑仔电影中的坚强女性到文艺片中的细腻角色，都展现出了不俗的功力。</p>
+                <p><strong>陈冠希</strong>，则以叛逆、帅气的形象切入大众视野，在《无间道》系列中饰演的陈永仁一角至今仍被影迷津津乐道。除了演戏，他在音乐和潮流文化方面也有重要贡献，是早期推动华语R&B发展的重要力量。</p>
+            </div>
+        </section>
+
+        <!-- Movies Section -->
+        <section id="movies" class="container">
+            <div class="section-header">
+                <h2 class="section-title">经典电影作品</h2>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/movie1/400/250.jpg" alt="喜剧之王海报" class="card-image">
+                    <div class="card-content">
+                        <span class="card-tag">张柏芝</span>
+                        <h3 class="card-title">喜剧之王</h3>
+                        <p class="card-excerpt">周星驰执导的经典喜剧，张柏芝饰演的柳飘飘一角深入人心，奠定了她在电影圈的地位。</p>
+                        <div class="card-meta">
+                            <span>2000年上映</span>
+                            <span>IMDb 8.2</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/movie2/400/250.jpg" alt="无间道海报" class="card-image">
+                    <div class="card-content">
+                        <span class="card-tag">陈冠希</span>
+                        <h3 class="card-title">无间道</h3>
+                        <p class="card-excerpt">刘伟强导演的警匪片经典，陈冠希饰演的陈永仁与梁朝伟的对手戏堪称影史最佳之一。</p>
+                        <div class="card-meta">
+                            <span>2002年上映</span>
+                            <span>IMDb 8.7</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/movie3/400/250.jpg" alt="忘不了海报" class="card-image">
+                    <div class="card-content">
+                        <span class="card-tag">张柏芝</span>
+                        <h3 class="card-title">忘不了</h3>
+                        <p class="card-excerpt">张柏芝凭借此片获得香港电影金像奖最佳女主角，展现了成熟的演技。</p>
+                        <div class="card-meta">
+                            <span>2003年上映</span>
+                            <span>IMDb 7.2</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Music & Style Section -->
+        <section id="music" class="container">
+            <div class="section-header">
+                <h2 class="section-title">音乐与时尚</h2>
+            </div>
+            <div class="grid-2">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/music1/600/300.jpg" alt="音乐专辑封面" class="card-image" style="height: 200px;">
+                    <div class="card-content">
+                        <span class="card-tag">音乐作品</span>
+                        <h3 class="card-title">《First Love》</h3>
+                        <p class="card-excerpt">张柏芝的首张粤语专辑，主打歌《后窗人》传唱度极高，展现了她的嗓音特色。</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/fashion/600/300.jpg" alt="潮流穿搭" class="card-image" style="height: 200px;">
+                    <div class="card-content">
+                        <span class="card-tag">潮流文化</span>
+                        <h3 class="card-title">潮流先锋</h3>
+                        <p class="card-excerpt">陈冠希作为CLOT品牌的创始人，长期活跃于时尚前沿，对两岸三地的潮流文化产生了深远影响。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section id="comparison" class="container">
+            <div class="section-header">
+                <h2 class="section-title">人物对比与特点</h2>
+            </div>
+            <div class="spotlight">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>维度</th>
+                            <th>张柏芝</th>
+                            <th>陈冠希</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>出道形象</strong></td>
+                            <td>清纯玉女，笑容甜美</td>
+                            <td>叛逆酷盖，街头风格</td>
+                        </tr>
+                        <tr>
+                            <td><strong>代表作</strong></td>
+                            <td>喜剧之王、忘不了、星愿</td>
+                            <td>无间道、头文字D、特警新人类2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>主要领域</strong></td>
+                            <td>电影、综艺、歌手</td>
+                            <td>电影、音乐、潮牌、设计</td>
+                        </tr>
+                        <tr>
+                            <td><strong>风格特点</strong></td>
+                            <td>演技多变，亲和力强</td>
+                            <td>潮流引领，个性鲜明</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container">
+            <div class="section-header">
+                <h2 class="section-title">常见问答</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <div class="faq-question">他们是否合作过电影？</div>
+                    <div class="faq-answer">是的，他们曾合作过电影《无间道II》，在片中饰演对手角色。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">张柏芝获得过哪些重要奖项？</div>
+                    <div class="faq-answer">张柏芝曾获得香港电影金像奖最佳女主角（凭《忘不了》）。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">陈冠希目前主要活跃在哪个领域？</div>
+                    <div class="faq-answer">陈冠希目前主要活跃于潮牌设计（CLOT）和摄影领域。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 演艺档案资料库. 保留所有权利.</p>
+            <p>本站仅供资料整理与回顾，不涉及任何商业用途。</p>
+            <p>网站内容基于公开资料整理，如有误漏敬请指正。</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all others
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
