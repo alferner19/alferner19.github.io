@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="六三四之剑漫画 - 福井晴敏经典军事漫画作品在线阅读平台。收录《六三四之剑》完整剧情、人物介绍、漫画章节目录及作者背景解析。">
+    <meta name="keywords" content="六三四之剑漫画, 福井晴敏, 军事漫画, 二战题材, 在线阅读">
+    <title>六三四之剑漫画 - 福井晴敏经典军事作品与剧情解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f4f6f7;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a.active {
+            color: var(--accent-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 18px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Main Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 32px;
+            margin-top: -32px;
+            padding-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 12px 0;
+                gap: 12px;
+            }
+            nav ul {
+                gap: 16px;
+                font-size: 14px;
+            }
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 48px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        /* Manga Grid */
+        .manga-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .manga-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .manga-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-cover {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 12px;
+        }
+
+        .card-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .rating {
+            color: #f39c12;
+        }
+
+        /* Intro Article */
+        .intro-article {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .intro-article h3 {
+            margin-bottom: 16px;
+            color: var(--primary-color);
+        }
+
+        .intro-article p {
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .intro-article strong {
+            color: var(--primary-color);
+        }
+
+        /* Character List */
+        .char-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .char-item {
+            display: flex;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .char-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #eee;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+
+        .char-avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .char-info h4 {
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .char-info p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter List */
+        .chapter-list {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .chapter-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.1s;
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .chapter-title {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .chapter-date {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .chapter-link {
+            font-size: 12px;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 48px 0 24px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+
+        /* Utility */
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #a93226;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>⚔️</span> 六三四之剑漫画
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#intro">作品简介</a></li>
+                    <li><a href="#characters">主要角色</a></li>
+                    <li><a href="#chapters">章节目录</a></li>
+                    <li><a href="#related">相关推荐</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>六三四之剑</h1>
+                <p>福井晴敏笔下的二战军事传奇，讲述剑道高手在枪炮时代如何用意志与技艺守护尊严的故事。</p>
+                <div class="hero-tags">
+                    <span class="tag">军事题材</span>
+                    <span class="tag">热血漫画</span>
+                    <span class="tag">二战历史</span>
+                    <span class="tag">剑道</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container main-layout">
+            <!-- Left Content -->
+            <div class="content-area">
+                
+                <!-- Intro Section -->
+                <section id="intro">
+                    <div class="section-header">
+                        <h2 class="section-title">作品简介</h2>
+                    </div>
+                    <article class="intro-article">
+                        <h3>关于《六三四之剑》</h3>
+                        <p><strong>《六三四之剑》</strong>是日本著名作家福井晴敏创作的军事题材漫画，原作小说名为《六三四之剑》，后来改编为漫画由手塚治虫文化奖得主手塚真绘制。故事背景设定在二战时期的太平洋战场，将传统<strong>剑道</strong>与残酷的<strong>战争</strong>相结合，构建了一个独特的“武士道”在枪炮时代下的生存图景。</p>
+                        <p>作品讲述了日本军国主义末期，一位拥有极高剑道天赋的少年六三四，被迫卷入残酷的战争。面对装备精良的美军，六三四没有选择退缩，而是用他手中的木剑，在枪林弹雨中诠释了何为“剑道精神”。故事不仅展现了战争的残酷，更深入探讨了在绝境中人性的光辉与尊严的坚守。</p>
+                        <p>这部作品因其深刻的思想内涵、严谨的历史考据以及独特的动作场面设计，被誉为军事漫画中的经典之作，深受读者喜爱。</p>
+                    </article>
+                </section>
+
+                <!-- Character Section -->
+                <section id="characters">
+                    <div class="section-header">
+                        <h2 class="section-title">主要角色</h2>
+                    </div>
+                    <div class="char-list">
+                        <div class="char-item">
+                            <div class="char-avatar">
+                                <img src="https://picsum.photos/seed/yoshida/100/100" alt="六三四头像">
+                            </div>
+                            <div class="char-info">
+                                <h4>六三四</h4>
+                                <p>本作主角，天才剑道少年。性格坚韧不拔，对剑道有着极高的悟性，在战争中展现出惊人的战斗意志。</p>
+                            </div>
+                        </div>
+                        <div class="char-item">
+                            <div class="char-avatar">
+                                <img src="https://picsum.photos/seed/muramasa/100/100" alt="村正头像">
+                            </div>
+                            <div class="char-info">
+                                <h4>村正</h4>
+                                <p>六三四的挚友与对手，同样拥有卓越的剑道才能。两人在生死与共的战斗中建立了深厚的羁绊。</p>
+                            </div>
+                        </div>
+                        <div class="char-item">
+                            <div class="char-avatar">
+                                <img src="https://picsum.photos/seed/sensei/100/100" alt="老师头像">
+                            </div>
+                            <div class="char-info">
+                                <h4>剑道老师</h4>
+                                <p>引导六三四成长的导师，教导他剑道的真谛不仅在于击倒对手，更在于磨炼心志。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapters Section -->
+                <section id="chapters">
+                    <div class="section-header">
+                        <h2 class="section-title">章节目录</h2>
+                        <a href="#" style="font-size:14px; color:var(--accent-color);">查看全部 &rarr;</a>
+                    </div>
+                    <div class="chapter-list">
+                        <div class="chapter-item">
+                            <span class="chapter-title">第1话：剑的诞生</span>
+                            <span class="chapter-date">2023-10-15</span>
+                            <a href="#" class="chapter-link">阅读</a>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-title">第2话：野良犬的咆哮</span>
+                            <span class="chapter-date">2023-10-22</span>
+                            <a href="#" class="chapter-link">阅读</a>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-title">第3话：剑道与战争</span>
+                            <span class="chapter-date">2023-10-29</span>
+                            <a href="#" class="chapter-link">阅读</a>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-title">第4话：敌阵突破</span>
+                            <span class="chapter-date">2023-11-05</span>
+                            <a href="#" class="chapter-link">阅读</a>
+                        </div>
+                        <div class="chapter-item">
+                            <span class="chapter-title">第5话：最后的木剑</span>
+                            <span class="chapter-date">2023-11-12</span>
+                            <a href="#" class="chapter-link">阅读</a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar">
+                <!-- Recommendation Card -->
+                <div class="intro-article" style="margin-bottom: 32px;">
+                    <h3>🔥 热门推荐</h3>
+                    <div style="display:flex; flex-direction:column; gap:12px;">
+                        <a href="#" style="font-size:14px; font-weight:500;">山本五十六传</a>
+                        <a href="#" style="font-size:14px; font-weight:500;">零式战机物语</a>
+                        <a href="#" style="font-size:14px; font-weight:500;">陆军参谋部</a>
+                    </div>
+                </div>
+
+                <!-- Info Box -->
+                <div class="intro-article" style="background-color: #e8f4fd; border: 1px solid #d0e3f5;">
+                    <h3 style="color: #2980b9;">📖 阅读指南</h3>
+                    <p style="font-size:13px; color:#555;">
+                        本站提供《六三四之剑》高清正版漫画阅读。请支持作者福井晴敏与手塚真老师，文明阅读。
+                    </p>
+                </div>
+
+                <!-- Ranking -->
+                <div class="intro-article" style="margin-top: 32px;">
+                    <h3>📊 剑道流派</h3>
+                    <ul style="font-size:14px; color:var(--text-secondary);">
+                        <li style="margin-bottom:8px;">柳生流</li>
+                        <li style="margin-bottom:8px;">古流剑术</li>
+                        <li style="margin-bottom:8px;">一刀流</li>
+                        <li>直心影流</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>六三四之剑漫画</h4>
+                    <p style="font-size:14px; line-height:1.8;">
+                        致力于提供最优质的军事漫画阅读体验。这里收录了福井晴敏经典作品及同类题材的高质量资源。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">最新章节</a></li>
+                        <li><a href="#">作品列表</a></li>
+                        <li><a href="#">排行榜</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">福井晴敏官网</a></li>
+                        <li><a href="#">手塚真画集</a></li>
+                        <li><a href="#">军事历史论坛</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 六三四之剑漫画阅读网 版权所有. 本站内容仅供学习交流使用，版权归原作者所有.
+            </div>
+        </div>
+    </footer>
+
+</body>
+                          </html>
