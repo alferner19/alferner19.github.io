@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="力源电子官网 - 专注于工业自动化控制与电力电子器件的解决方案提供商。提供PLC、变频器、伺服系统、智能电表及电力电子元器件的选型、技术支持与供应链服务。">
+    <meta name="keywords" content="力源电子,工业自动化,PLC,变频器,伺服系统,电力电子,智能电表,元器件">
+    <title>力源电子-工业自动化控制与电力电子解决方案专家</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #00a8e8;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f4f6f9;
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --border-radius: 4px;
+            --container-width: 1200px;
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #004494;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            height: var(--header-height);
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #2c3e50 100%);
+            color: var(--white);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0,168,232,0.2) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-image {
+            background-color: rgba(255,255,255,0.05);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-image img {
+            border-radius: 2px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Categories */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background: var(--white);
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+            border-color: var(--secondary-color);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .category-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .category-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Products Section */
+        .products-section {
+            background-color: var(--light-bg);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-tag {
+            display: inline-block;
+            background-color: #e6f7ff;
+            color: var(--primary-color);
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .product-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .product-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .product-link {
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .product-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Features Section */
+        .features-section {
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon-box {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(0, 168, 232, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--light-bg);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .about-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .stat-item h4 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .stat-item span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--dark-bg);
+            color: var(--white);
+        }
+
+        .contact-section .section-header h2 {
+            color: var(--white);
+        }
+
+        .contact-section .section-header p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-details p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .contact-form {
+            background-color: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: var(--border-radius);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 4px;
+            color: var(--white);
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #888;
+            padding: 60px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            margin-top: 15px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                padding: 20px;
+            }
+            nav.active {
+                display: block;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .header-actions .btn {
+                display: none;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor"/>
+                </svg>
+                <span>力源电子</span>
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#products">产品中心</a></li>
+                    <li><a href="#solutions">解决方案</a></li>
+                    <li><a href="#about">关于力源</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-primary">技术咨询</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>驱动工业智能，赋能电力未来</h1>
+                <p>力源电子致力于为工业自动化、能源管理及电力电子领域提供高品质的核心器件与系统解决方案。从PLC控制到智能电表，我们连接每一个精准时刻。</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">浏览产品</a>
+                    <a href="#solutions" class="btn btn-outline">查看方案</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Placeholder for industrial image -->
+                <img src="https://picsum.photos/seed/industry_tech/600/400.jpg" alt="工业自动化控制室">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>核心产品分类</h2>
+                <p>覆盖工业自动化与电力电子全产业链</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">⚡</div>
+                    <h3>电力电子器件</h3>
+                    <p>IGBT模块、二极管、晶闸管及功率模块，提供高效率、低损耗的电力转换方案。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">⚙️</div>
+                    <h3>工业控制单元</h3>
+                    <p>高性能PLC、运动控制卡及嵌入式系统，实现复杂逻辑与精准运动控制。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">📊</div>
+                    <h3>智能仪器仪表</h3>
+                    <p>高精度智能电表、多功能电力仪表及数据采集终端，助力能源数字化管理。</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🔌</div>
+                    <h3>电源与适配器</h3>
+                    <p>开关电源、线性电源及工业级电源适配器，提供稳定可靠的电能供应。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>热门产品系列</h2>
+                <p>精选工业级元器件，满足严苛应用环境</p>
+            </div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/seed/plc_system/400/300.jpg" alt="工业PLC控制系统">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">核心控制</span>
+                        <h3>高性能工业PLC</h3>
+                        <p>支持高速计数、PID闭环控制，适用于自动化流水线、机械手及智能仓储系统。</p>
+                        <a href="#" class="product-link">查看详情 →</a>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/seed/igbt_module/400/300.jpg" alt="IGBT功率模块">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">功率器件</span>
+                        <h3>大功率IGBT模块</h3>
+                        <p>耐高压、耐高温，应用于变频器、电机驱动及焊接设备，提升能效比。</p>
+                        <a href="#" class="product-link">查看详情 →</a>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/seed/smart_meter/400/300.jpg" alt="智能电表">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">智能仪表</span>
+                        <h3>三相智能电表</h3>
+                        <p>具备RS485通讯接口，支持远程抄表与数据监测，符合国网标准。</p>
+                        <a href="#" class="product-link">查看详情 →</a>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/seed/servo_motor/400/300.jpg" alt="伺服驱动系统">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">运动控制</span>
+                        <h3>伺服驱动与电机</h3>
+                        <p>高响应速度、高定位精度，实现精密机床与包装机械的精准定位。</p>
+                        <a href="#" class="product-link">查看详情 →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="solutions" class="section features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>为什么选择力源电子</h2>
+                <p>专业技术团队与完善服务体系保障您的项目顺利落地</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon-box">🛡️</div>
+                    <h3>品质保障</h3>
+                    <p>所有元器件均通过严格筛选与测试，确保在恶劣工业环境下的稳定运行。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">🔧</div>
+                    <h3>技术支持</h3>
+                    <p>提供从选型咨询、电路设计到现场调试的一站式技术支持服务。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">📦</div>
+                    <h3>库存充足</h3>
+                    <p>核心元器件建立安全库存，满足紧急交付需求，缩短项目周期。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">🤝</div>
+                    <h3>定制服务</h3>
+                    <p>根据客户特殊需求，提供OEM/ODM代工及非标产品的研发与生产。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/office_meeting/600/500.jpg" alt="力源电子研发团队">
+                </div>
+                <div class="about-text">
+                    <h2>致力于成为工业电子领域的领航者</h2>
+                    <p>力源电子成立于2005年，是一家集研发、生产、销售于一体的国家级高新技术企业。我们专注于电力电子技术的创新与应用，致力于为工业4.0时代的自动化设备提供核心动力。</p>
+                    <p>凭借多年的行业积累，我们构建了覆盖全国的营销服务网络，与国内外知名品牌建立了长期稳定的合作关系。我们的使命是通过优质的电子元器件，提升工业设备的运行效率与智能化水平。</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4>18+</h4>
+                            <span>年行业经验</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>5000+</h4>
+                            <span>服务客户</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>50+</h4>
+                            <span>专利技术</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>联系我们</h2>
+                <p>无论您有任何选型需求或技术问题，欢迎随时与我们取得联系</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>公司地址</h4>
+                            <p>中国·江苏省苏州市工业园区科技大道88号力源电子大厦</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>服务热线</h4>
+                            <p>400-123-4567 (工作日 9:00-18:00)</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>商务邮箱</h4>
+                            <p>sales@liyuandianzi.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h4>服务时间</h4>
+                            <p>周一至周五 8:30 - 17:30</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('感谢您的留言，我们会尽快与您联系！');">
+                        <div class="form-group">
+                            <label for="name">您的姓名</label>
+                            <input type="text" id="name" placeholder="请输入姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">联系电话</label>
+                            <input type="tel" id="phone" placeholder="请输入联系电话" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">咨询内容</label>
+                            <select id="subject">
+                                <option value="product">产品咨询</option>
+                                <option value="solution">解决方案</option>
+                                <option value="quote">价格报价</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言详情</label>
+                            <textarea id="message" rows="4" placeholder="请简述您的需求..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">发送留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span>力源电子</span>
+                    </a>
+                    <p>专注工业自动化与电力电子技术，为全球客户提供高品质元器件与系统解决方案。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品中心</h4>
+                    <ul>
+                        <li><a href="#">电力电子器件</a></li>
+                        <li><a href="#">工业PLC</a></li>
+                        <li><a href="#">智能仪表</a></li>
+                        <li><a href="#">伺服系统</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>解决方案</h4>
+                    <ul>
+                        <li><a href="#">自动化生产线</a></li>
+                        <li><a href="#">能源管理系统</a></li>
+                        <li><a href="#">电力转换方案</a></li>
+                        <li><a href="#">物联网应用</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">发展历程</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">新闻动态</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 力源电子 版权所有 | 苏ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('main-nav').classList.remove('active');
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+                                                   </html>
