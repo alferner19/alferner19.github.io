@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="西瓜冰淇淋专题页，提供西瓜冰淇淋的制作方法、口感评测、夏日解暑食谱以及适合的搭配建议。了解如何制作清凉解暑的西瓜冰淇淋，探索不同口味的西瓜冰淇淋推荐。">
+    <meta name="keywords" content="西瓜冰淇淋,西瓜冰淇淋制作,夏日甜品,西瓜冰淇淋评测,自制冰淇淋">
+    <title>西瓜冰淇淋-夏日清凉解暑与自制食谱指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b6b;
+            --primary-dark: #e05454;
+            --secondary-color: #4ecdc4;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --bg-light: #f7f9fc;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff0f0 0%, #e6fffa 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background-color: var(--bg-white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: var(--radius-md);
+            background-color: var(--bg-light);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Recipe Section (Main Content) */
+        .recipe-section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .recipe-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.3s;
+        }
+
+        .recipe-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 220px;
+            background-color: #ffeaa7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            position: relative;
+        }
+
+        .recipe-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .recipe-content {
+            padding: 25px;
+        }
+
+        .recipe-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .recipe-desc {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .recipe-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            padding: 60px 0;
+            background-color: var(--bg-white);
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        td {
+            color: var(--text-light);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        .faq-item {
+            background-color: var(--bg-white);
+            border-radius: var(--radius-md);
+            padding: 25px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #b2bec3;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--bg-white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+
+            .nav-wrapper {
+                justify-content: center;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">🍉 <span>西瓜冰淇淋</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#recipes" class="active">食谱大全</a></li>
+                    <li><a href="#comparison">口味评测</a></li>
+                    <li><a href="#tips">制作技巧</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>夏日解暑首选：<br><span>西瓜冰淇淋</span></h1>
+                <p>将炎炎夏日的甜蜜清凉封存。探索如何利用新鲜西瓜制作口感绵密、清甜不腻的西瓜冰淇淋，是夏日餐桌上的必备甜品。</p>
+                <a href="#recipes" class="cta-button">开始制作</a>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧊</div>
+                        <h3>冰爽口感</h3>
+                        <p>纯天然果肉融合冰沙质地，入口即化，带来瞬间降温的极致体验。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🥒</div>
+                        <h3>低卡健康</h3>
+                        <p>相比传统奶油冰淇淋，西瓜冰淇淋热量更低，富含维生素，更易消化。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>色彩诱人</h3>
+                        <p>天然的西瓜红，视觉上就能激发食欲，是拍照分享的绝佳夏日美食。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Section -->
+        <section id="recipes" class="recipe-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>经典西瓜冰淇淋食谱</h2>
+                    <p>从简单搅拌到专业冷冻，多种做法满足不同需求</p>
+                </div>
+
+                <div class="recipe-grid">
+                    <!-- Recipe 1 -->
+                    <article class="recipe-card">
+                        <div class="recipe-image">
+                            🍉
+                            <span class="recipe-badge">简单</span>
+                        </div>
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">经典西瓜冰沙</h3>
+                            <p class="recipe-desc">适合不想等待冷冻的朋友。只需将西瓜切块、去籽，放入搅拌机打碎即可。加入少许柠檬汁提鲜。</p>
+                            <div class="recipe-meta">
+                                <span class="meta-item">⏱ 5分钟</span>
+                                <span class="meta-item">🔥 难度：初级</span>
+                            </div>
+                            <a href="#" class="read-more">查看详细步骤 →</a>
+                        </div>
+                    </article>
+
+                    <!-- Recipe 2 -->
+                    <article class="recipe-card">
+                        <div class="recipe-image">
+                            🍧
+                            <span class="recipe-badge">进阶</span>
+                        </div>
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">奶油西瓜冰淇淋</h3>
+                            <p class="recipe-desc">混合淡奶油、牛奶和细砂糖，加入捣碎的西瓜泥。口感更加绵密顺滑，适合家庭制作。</p>
+                            <div class="recipe-meta">
+                                <span class="meta-item">⏱ 20分钟</span>
+                                <span class="meta-item">🔥 难度：中级</span>
+                            </div>
+                            <a href="#" class="read-more">查看详细步骤 →</a>
+                        </div>
+                    </article>
+
+                    <!-- Recipe 3 -->
+                    <article class="recipe-card">
+                        <div class="recipe-image">
+                            🍨
+                            <span class="recipe-badge">创意</span>
+                        </div>
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">西瓜脆皮雪糕</h3>
+                            <p class="recipe-desc">制作西瓜冰淇淋球，裹上巧克力脆皮或坚果碎。造型精美，口感层次丰富。</p>
+                            <div class="recipe-meta">
+                                <span class="meta-item">⏱ 30分钟</span>
+                                <span class="meta-item">🔥 难度：高级</span>
+                            </div>
+                            <a href="#" class="read-more">查看详细步骤 →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section id="comparison" class="comparison-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>西瓜冰淇淋 vs 传统冰淇淋</h2>
+                    <p>不同类型的冰淇淋在口感和成分上的区别</p>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>对比项目</th>
+                                <th>西瓜冰淇淋</th>
+                                <th>传统奶油冰淇淋</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>主要成分</td>
+                                <td>西瓜果肉、牛奶/酸奶、少量糖</td>
+                                <td>稀奶油、牛奶、蛋黄、大量糖</td>
+                            </tr>
+                            <tr>
+                                <td>热量含量</td>
+                                <td>较低（每100g约60-80大卡）</td>
+                                <td>较高（每100g约150-200大卡）</td>
+                            </tr>
+                            <tr>
+                                <td>口感特点</td>
+                                <td>清爽、果香浓郁、有颗粒感</td>
+                                <td>顺滑、奶香浓郁、质地细腻</td>
+                            </tr>
+                            <tr>
+                                <td>适合人群</td>
+                                <td>怕胖人群、喜欢清爽口感者</td>
+                                <td>喜爱浓郁奶味、追求口感极致者</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="recipe-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>制作西瓜冰淇淋的技巧</h2>
+                    <p>让您的西瓜冰淇淋口感更上一层楼</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>🧊 控制温度</h3>
+                        <p>制作过程中尽量保持低温。如果家里没有冰淇淋机，可以将混合液在冰箱冷冻室冷藏，每隔1小时取出搅拌一次，重复3-4次，以减少冰晶。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🍯 糖的配比</h3>
+                        <p>西瓜本身含有糖分，因此添加的糖量要适当减少。过甜会掩盖西瓜的清香，且容易导致冷冻后口感过硬。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🍋 柠檬汁的作用</h3>
+                        <p>加入少许柠檬汁不仅能中和甜味，还能帮助稳定蛋白霜（如果使用），同时能增加西瓜的风味层次，使其更加清新。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">❓ 西瓜冰淇淋能保存多久？</div>
+                        <div class="faq-answer">
+                            西瓜冰淇淋因为含有大量水分，相比纯奶油冰淇淋更容易融化。建议在冰箱冷冻室保存不超过2周，且取出食用前不要在室温下放置过久。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">❓ 必须要用冰淇淋机吗？</div>
+                        <div class="faq-answer">
+                            不需要。虽然冰淇淋机能让口感更细腻，但通过多次手动搅拌（"手打"法）也能达到不错的冰沙效果，适合家庭制作。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">❓ 西瓜需要去皮去籽吗？</div>
+                        <div class="faq-answer">
+                            建议去皮去籽。西瓜皮和西瓜籽会影响冰淇淋的细腻口感和外观。如果追求颗粒感，可以保留少量西瓜块，但籽必须去除。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">❓ 为什么做出来的西瓜冰淇淋有冰渣？</div>
+                        <div class="faq-answer">
+                            这通常是因为冷冻速度过快或搅拌次数不足。冰晶在冰淇淋中形成是正常的，但频繁搅拌可以破坏冰晶结构，使口感更顺滑。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">西瓜冰淇淋专题致力于分享夏日最清凉的甜品制作方法与选购指南。我们提供从家庭DIY食谱到专业口感评测的全方位内容。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#recipes">食谱大全</a></li>
+                        <li><a href="#comparison">口味评测</a></li>
+                        <li><a href="#tips">制作技巧</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关推荐</h4>
+                    <ul>
+                        <li><a href="#">芒果冰淇淋</a></li>
+                        <li><a href="#">酸奶冰棒</a></li>
+                        <li><a href="#">夏日饮品</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 西瓜冰淇淋专题页. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
